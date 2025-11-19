@@ -24,7 +24,7 @@ Le projet inclut la configuration d’un environnement Wazuh, la création de r�
 
 ---
 
-## 🧠 Contexte : Opération "Soft Cell"
+##  Contexte : Opération "Soft Cell"
 L’étude de cas provient d’une attaque avancée menée contre des opérateurs télécom.  
 Les attaquants ont utilisé divers TTPs, notamment :  
 - **Webshells (T1505.003)**  
@@ -34,7 +34,7 @@ Les attaquants ont utilisé divers TTPs, notamment :
 - **DLL Side-Loading (T1574.002)**  
 - **Exfiltration Over C2 (T1041)**
 
-## 🛠️ Outils utilisés
+##  Outils utilisés
 - **Wazuh Manager** : Monitoring, analyse des logs, détection  
 - **Wazuh Agent (Windows 10)**  
 - **Sysmon** pour une meilleure visibilité  
@@ -44,7 +44,7 @@ Les attaquants ont utilisé divers TTPs, notamment :
 
 ---
 
-## 🔍 1. Analyse & Identification des TTPs
+##  1. Analyse & Identification des TTPs
 À partir de l’étude Soft Cell, une analyse complète a permis d’identifier les TTPs clés appartenant à plusieurs tactiques MITRE :
 
 - **Persistence** : Webshells, RAT  
@@ -56,20 +56,20 @@ Les attaquants ont utilisé divers TTPs, notamment :
 - **Lateral Movement** : Remote Admin Shares  
 
 Ces TTPs ont ensuite été mappés avec leurs IDs MITRE ATT&CK.
-🧰 3. Configuration Wazuh & Création des Règles
+ 3. Configuration Wazuh & Création des Règles
 
-### 🔧 Installation
+###  Installation
 - Déploiement Wazuh Manager sur VM  
 - Ajout de l’agent Windows 10  
 - Installation de Sysmon + configuration `sysmonconfig.xml`
-## 🧪 4. Simulation d’attaques & Validation
+##  4. Simulation d’attaques & Validation
 
-### 🧨 Webshell Attack
+###  Webshell Attack
 1. Création de `webshell-script.aspx` dans `inetpub/wwwroot`  
 2. Modification du fichier  
 3. Visualisation des alertes dans Wazuh Dashboard
 
-### 🧨 PowerShell Obfuscation Attack
+###  PowerShell Obfuscation Attack
 - Commande obfusquée / encodée  
 - Exécution d’un script malveillant  
 - Détection automatique via les règles XML  
@@ -78,7 +78,7 @@ Ces tests ont permis d’ajuster les règles et de réduire les faux positifs.
 
 ---
 
-## 📊 Résultats
+##  Résultats
 - Mise en place de plusieurs règles Wazuh alignées MITRE  
 - Détection réussie des Webshells  
 - Détection de PowerShell encodé / obfusqué  
@@ -87,7 +87,7 @@ Ces tests ont permis d’ajuster les règles et de réduire les faux positifs.
 
 ---
 
-## 📝 Conclusion
+##  Conclusion
 Ce projet a permis de :
 - Comprendre les TTPs d’une attaque avancée  
 - Traduire ces TTPs en use cases SOC opérationnels  
