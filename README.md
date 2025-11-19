@@ -101,9 +101,7 @@ Il démontre l’importance d’une approche basée sur **MITRE ATT&CK** pour re
 ##  Auteurs
 - **Imane EL GHAIT**  
 
-Ces TTPs ont été analysés et transformés en cas d’usage SOC.
 
----
 
-## 🧩 Architecture du projet
+
 
